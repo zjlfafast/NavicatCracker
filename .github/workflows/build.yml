@@ -4,7 +4,7 @@ on: [push]
 jobs:
   navicat-keygen-x86:
     runs-on: windows-latest
-    if: "startsWith(github.event.head_commit.message, '[build]')"
+    if: "startsWith(github.event.head_commit.message, '[build-x86]')"
     steps:
       - name: Install dependencies
         run: |
@@ -33,7 +33,7 @@ jobs:
 
   navicat-keygen-x64:
     runs-on: windows-latest
-    if: "startsWith(github.event.head_commit.message, '[build]')"
+    if: "startsWith(github.event.head_commit.message, '[build-x64]')"
     steps:
       - name: Install dependencies
         run: |
